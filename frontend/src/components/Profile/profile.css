@@ -1,0 +1,33 @@
+.profile2{
+    background-color: #fff;
+    width: 200px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    
+    
+}
+
+.profile2 .items,.task-list-item{
+    display: flex;
+    align-items: center;
+    gap :10px;
+    padding: 10px;
+    padding-bottom: 10px;
+}
+
+.profile2 .items p,.task-drop-text p{
+    font-size: 15px;
+    font-weight: bold;
+
+}
+.profile2 .items > svg, .task-list-item > svg{
+    color: #9ca3af;
+}
+.profile2 .items:hover, .task-list-item:hover{
+    background-color: #f2f4f6;
+    cursor: pointer;
+}
+

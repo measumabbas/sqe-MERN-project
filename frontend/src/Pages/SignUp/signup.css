@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sign-container{
+    background-image: url('./court.jpg');
+    /* height: 100vh; */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-main-section{
+    background-color: rgba(10, 22, 13, 0.658);
+    /* height: 100vh; */
+    width: 100%;
+    display: flex;
+}
+.sign-text-section{
+    color: white;
+    font-size: 30px;
+    line-height: 70px;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.sign-text-section img{
+    height: 200px;
+    width: 200px;
+}
+.sign-main-log{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup-section{
+    background-color: white;
+    /* height: 550px; */
+    width: 650px;
+    /* margin: auto; */
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    padding: 20px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.form-sec{
+    display: flex;
+
+}
+.signup-section img{
+    height: 60px;
+    width: 60px;
+}
+.log-section{
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    margin: auto; 
+    padding: 30px;
+    word-spacing: 1px;
+}
+.signup-section h2{
+    padding: 15px;
+    font-weight: 700;
+}
+.signup-section form{
+    width: 100%;
+}
+.signup-section input{
+    width: 45%;
+    padding: 13px;
+    margin: 13px;
+    background: transparent;
+    outline: none;
+    font-size: 25px;
+    border: 1px solid black;
+    background-color: white;
+    color: #222;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+}
+textarea{
+    padding: 13px;
+    margin: 13px;
+    background: transparent;
+    outline: none;
+    font-size: 25px;
+    border: 1px solid black;
+    background-color: white;
+    color: #222;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    width: 94%;
+    height: 100px;
+}
+
+.sign-sec input{
+   background-color:black;
+   margin-top: 20px;
+   color: white;
+   font-weight: 700;
+   cursor: pointer;
+   transition-duration: 0.5s;
+   width: 95%;
+}
+.sign-sec input:hover{
+    background-color: #fff;
+    color: black;
+}
+.sign-link{
+    margin-top: 20px;
+    word-spacing: 1px;  
+    text-align: center;
+    cursor: pointer;
+}
+.sign-link h3{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+}
+.sign-link a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #0898ff;
+    margin-left: 5px;
+}
+
+.gender-section{
+    display: flex; 
+    margin: auto;
+}
+
+.sign-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+
+.head-sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-sec h2{
+    text-align: center;
+}

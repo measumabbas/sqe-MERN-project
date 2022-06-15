@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.login-container{
+    background-image: url('./court.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-main-section{
+    background-color: rgba(10, 22, 13, 0.658);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.login-text-section{
+    color: white;
+    font-size: 30px;
+    margin: auto;
+    line-height: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.login-text-section h2{
+    text-align: center;
+}
+
+.login-text-section img{
+    height: 200px;
+    width: 200px;
+}
+.login-section{
+    background-color: white;
+    height: 450px;
+    width: 320px;
+    margin: auto;
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding: auto;
+}
+.login-section img{
+    height: 60px;
+    width: 60px;
+    margin-top: -20px;
+}
+.login-section h2{
+    padding: 15px;
+    font-weight: 700;
+}
+.login-section form{
+    width: 100%;
+}
+.login-section input{
+    width: 90%;
+    padding: 13px;
+    margin: 13px;
+    background: transparent;
+    outline: none;
+    font-size: 25px;
+    border: 1px solid black;
+    background-color: white;
+    color: #222;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.forget-pass a{
+    margin-top: 14px;
+    margin-bottom: 14px;
+    margin-left: 13px;
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    transition-duration: 0.5s;
+}
+.forget-pass a:hover{
+    color: #0898ff;
+}
+.log-sec span{
+   background-color:black;
+   margin-top: 20px;
+   color: white;
+   font-weight: 700;
+   cursor: pointer;
+   transition-duration: 0.5s;
+   width: 90%;
+   padding: 10px;
+   text-align: center;
+   border: 1px solid #000;
+}
+.log-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log-sec span:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid #000;
+}
+.sign-link{
+    margin-left: 13px;
+    margin-top: 25px;
+    word-spacing: 1px;
+    cursor: pointer;
+}
+.sign-link h3{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+}
+.sign-link a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #0898ff;
+    margin-left: 5px;
+}
