@@ -1,7 +1,9 @@
 const router = require('express').Router();
 const Student = require('../models/Student');
 const Course = require('../models/Courses');
-const Cours = require('../models/Course')
+const Cours = require('../models/Course');
+const Courses = require('../models/Courses');
+const { createIndexes, findByIdAndUpdate, findByIdAndDelete } = require('../models/Student');
 
 
 router.post('/add', async (req,res)=>{
@@ -23,7 +25,7 @@ router.post('/course',async (req,res)=>{
         const savedCourse = await newCourse.save();
         res.status(200).json({savedCourse});
     } catch (error) {
-        res.status(500).json('Internal Server Error')
+        res.status(500).json(error)
     }
 });
 
@@ -78,4 +80,66 @@ router.get('/getcourses',async (req,res)=>{
         
     }
 })
+
+
+router.post('/getsecscourses',async (req,res)=>{
+    const registration = req.body.registration
+    try {
+        const course = await Courses.find();
+        // console.log(course);
+        let filtered = course.filter((c)=>{
+            return c.registration === registration
+        })
+        if(filtered.length !== 0){
+            res.status(200).json(filtered);
+        }else{
+            res.status(404).json('Not Found');
+        }
+
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
+router.delete('/delete', async (req,res)=>{
+    const name = req.body.name;
+    const registration = req.body.registration
+
+    try {
+
+        // console.log(name,registration);
+        const course = await Courses.find()
+        let filtered = course.filter((c)=>{
+            return c.registration === registration;
+        })
+        // console.log(name)
+        let delId = filtered[0].id
+        const toDelete = await Courses.findById(delId);
+        const result = await Courses.findByIdAndUpdate(delId,{
+            $pull:{courses:{$in:name}}
+        },{new:true})
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
+router.delete('/deleteall', async (req,res)=>{
+    const registration = req.body.registration;
+
+    try {
+        const course = await Courses.find()
+        let filtered = course.filter((c)=>{
+            return c.registration === registration;
+        });
+        let delId = filtered[0].id;
+        let toDeleteCourse = await Courses.findByIdAndRemove(delId);
+        res.status(200).json(toDeleteCourse)
+    } catch (error) {
+        res.status(500).json(error);
+    }
+   
+
+})
+
 module.exports = router;

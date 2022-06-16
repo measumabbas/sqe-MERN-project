@@ -23,55 +23,6 @@ const SideBar = () => {
                             <p>Dashboard</p>
                         </div>
                     </div>
-              
-                    <div className='list-item'>
-                        <div className="icon">
-                            <FaUniversity />
-                        </div>
-                        <div className="text">
-                            <p>Institution Branch</p>
-                        </div>
-                    </div>
-     
-
-                    <div className='list-item'>
-                        <div className="icon">
-                            <GiInjustice />
-                        </div>
-                        <div className="text">
-                            <p>Judiciary Branch</p>
-                        </div>
-                    </div>
-
-                    <div className='list-item'>
-                        <div className="icon">
-                            <GiPapers />
-                        </div>
-                        <div className="text">
-                            <p>Proposed List</p>
-                        </div>
-                    </div>
-
-             
-                    <div className='list-item'>
-                        <div className="icon">
-                            <MdAppRegistration />
-                        </div>
-                        <div className="text">
-                            <p>Registrar</p>
-                        </div>
-                    </div>
-
-        
-
-                    <div className='list-item'>
-                        <div className="icon">
-                            <ImHammer2 />
-                        </div>
-                        <div className="text">
-                            <p>Hearings</p>
-                        </div>
-                    </div>
 
             </div>
         </div>
