@@ -140,6 +140,31 @@ router.delete('/deleteall', async (req,res)=>{
     }
    
 
-})
+});
+router.put('/update', async (req,res)=>{
+    const name = req.body.name;
+    const registration = req.body.registration;
+    const update = req.body.update;
+
+    try {
+
+        const course = await Courses.find()
+        let filtered = course.filter((c)=>{
+            return c.registration === registration;
+        })
+        // console.log(name)
+        let updId = filtered[0].id;
+            console.log(filtered)
+
+            console.log(name,registration,update)
+        const result = await Courses.updateOne({updId,courses:{$in:name}},{
+            $set:{'courses.$':update}
+        },{new:true})
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(500).json(error)
+    }
+
+});
 
 module.exports = router;
